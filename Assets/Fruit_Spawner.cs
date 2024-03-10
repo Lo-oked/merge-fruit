@@ -13,7 +13,7 @@ public class Fruit_Spawner : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonUp(0))
         {
-            Instantiate(Fruits[0], new Vector3(mousePosition.x,0,0), Quaternion.identity);
+            Instantiate(Fruits[0], new Vector3(mousePosition.x,gameObject.transform.position.y,0), Quaternion.identity);
         }
         fruit_merge();
     }
